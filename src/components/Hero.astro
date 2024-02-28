@@ -14,9 +14,8 @@ interface Props {
 const { head, title, description, price, oldprice } = Astro.props;
 ---
 
-<li class="content">
-  <aside>
-    <img class="img-container" alt="" />
+<div class="content">
+  <aside class="img-container">
   </aside>
   <article class="article">
     <p class="perfume">{head}</p>
@@ -41,7 +40,7 @@ const { head, title, description, price, oldprice } = Astro.props;
       Add to Cart</button
     >
   </article>
-</li>
+</div>
 
 <style lang="scss">
   @import "../styles/hero.scss";
@@ -51,4 +50,3 @@ const { head, title, description, price, oldprice } = Astro.props;
       width: 580px;
     }
   }
-</style>
