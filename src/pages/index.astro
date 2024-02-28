@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <div class="whole-page">
+    <div class="container">
+      <Hero
+        head="PERFUME"
+        title="Gabrielle Essence Eau De Parfum"
+        description="A floral, solar and voluptuous Interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL."
+        price={149.99}
+        oldprice={169.99}
+      />
+    </div>
+  </div>
+
+  <style lang="scss">
+    @import "../styles/global.scss";
+  </style>
+    <script src="../components/changeimg.js"></script>
+
+</html>

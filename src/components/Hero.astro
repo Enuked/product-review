@@ -1,0 +1,47 @@
+---
+import avatar from "../../public/assets/images/image-product-mobile.jpg";
+import avatar2 from "../../public/assets/images/image-product-desktop.jpg";
+import cart from "../../public/assets/images/icon-cart.svg";
+
+interface Props {
+  head: string;
+  title: string;
+  description: string;
+  price: number;
+  oldprice: number;
+}
+
+const { head, title, description, price, oldprice } = Astro.props;
+---
+<li class="content">
+  <aside>
+    <img class="img-container"  alt="ndwasd"/>
+  </aside>
+  <article class="article">
+    <p class="perfume">{head}</p>
+    <h2 class="title">
+      {title}
+    </h2>
+    <p class="description">
+      {description}
+    </p>
+    <section class="section">
+      <div class="prices">
+      <h3>
+        {"$" + price}
+      </h3>
+      <p>
+        {"$" + oldprice}
+      </p>
+			</div>
+    </section>
+    <button class="add">
+      <img src={cart.src} />
+      Add to Cart</button
+    >
+  </article>
+</li>
+
+<style>
+  @import "../styles/hero.scss";
+</style>
