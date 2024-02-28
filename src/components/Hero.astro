@@ -13,9 +13,10 @@ interface Props {
 
 const { head, title, description, price, oldprice } = Astro.props;
 ---
+
 <li class="content">
   <aside>
-    <img class="img-container"  alt="ndwasd"/>
+    <img class="img-container" alt="" />
   </aside>
   <article class="article">
     <p class="perfume">{head}</p>
@@ -27,13 +28,13 @@ const { head, title, description, price, oldprice } = Astro.props;
     </p>
     <section class="section">
       <div class="prices">
-      <h3>
-        {"$" + price}
-      </h3>
-      <p>
-        {"$" + oldprice}
-      </p>
-			</div>
+        <h3>
+          {"$" + price}
+        </h3>
+        <p>
+          {"$" + oldprice}
+        </p>
+      </div>
     </section>
     <button class="add">
       <img src={cart.src} />
@@ -42,6 +43,12 @@ const { head, title, description, price, oldprice } = Astro.props;
   </article>
 </li>
 
-<style>
+<style lang="scss">
   @import "../styles/hero.scss";
+  aside {
+    height: 300px;
+    @media (min-width: 768px) {
+      width: 580px;
+    }
+  }
 </style>
